@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/francescoalbanese/Desktop/redsift/sift-dmarc-insights'
+let g:netrw_dirhist_2='/Users/francescoalbanese/Desktop/redsift/sift-dmarc-insights/frontend'
+let g:netrw_dirhist_3='/Users/francescoalbanese/Desktop/redsift/sift-dmarc-insights/frontend/src'
+let g:netrw_dirhist_4='/Users/francescoalbanese/Desktop/redsift/sift-dmarc-insights/frontend/src/scripts'
+let g:netrw_dirhist_5='/Users/francescoalbanese/Desktop/redsift/sift-dmarc-insights/frontend/src/scripts/components'
+let g:netrw_dirhist_6='/Users/francescoalbanese/Desktop/redsift/sift-dmarc-insights'
