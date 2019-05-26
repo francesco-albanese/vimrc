@@ -61,6 +61,9 @@ set backup
 " don't break words when line wrapping
 set lbr
 
+" copy into system clipboard
+set clipboard=unnamed
+
 " set autoindent
 set ai
 
