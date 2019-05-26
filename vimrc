@@ -29,9 +29,12 @@ set cursorline
 set scrolloff=5
 
 set incsearch
+set hlsearch
 set nu
+set relativenumber
 set ignorecase
 set smartcase
+set guifont=Fira\ Mono\ for\ Powerline
 
                         
 " redraw only when we need to.
@@ -44,7 +47,7 @@ set showmatch
 set foldenable          
 
 " open most folds by default
-set foldlevelstart=10   
+set foldlevelstart=0
 
 " 10 nested fold max
 set foldnestmax=10      
@@ -98,11 +101,18 @@ colorscheme codedark
 
 "CtrlP settings (file explorer)
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_match_window='bottom,order:ttb'
+let g:ctrlp_switch_buffer=0
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+let g:ctrlp_root_markers=['.ctrlp']
+let g:ctrlp_by_filename=1
+let g:ctrlp_regexp=1
+let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s', 'find %s -type f']
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 "NERDTree
 autocmd vimenter * NERDTree
@@ -115,3 +125,4 @@ let g:NERDTreeDisableExactMatchHighlight = 1
 let g:NERDTreeDisablePatternMatchHighlight = 1
 let g:NERDTreeSyntaxEnabledExtensions = ['html', 'json', 'markdown', 'md', 'python', 'js', 'jsx', 'css', 'py', 'scss', 'styl']
 let g:NERDTreeHighlightCursorline = 0
+autocmd BufEnter * silent! if bufname('%') !~# 'NERD_tree_' | cd %:p:h | NERDTreeCWD | wincmd p | endif
