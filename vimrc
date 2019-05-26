@@ -31,12 +31,10 @@ set scrolloff=5
 set incsearch
 set hlsearch
 set nu
-set relativenumber
 set ignorecase
 set smartcase
 set guifont=Fira\ Mono\ for\ Powerline
 
-                        
 " redraw only when we need to.
 set lazyredraw          
 
