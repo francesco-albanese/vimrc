@@ -19,6 +19,7 @@ set wildmenu
 
 "tabs
 set tabstop=2
+set shiftwidth=0
 set softtabstop=2
 set expandtab
 
@@ -63,7 +64,7 @@ set backup
 set lbr
 
 " copy into system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " set autoindent
 set ai
@@ -72,6 +73,9 @@ set ai
 set si
 
 set bg=dark
+
+" map Ctrl-C to <ESC>
+map <C-C> <ESC>
 
 " Runtime path manipulation by pathogen plugin
 execute pathogen#infect()
