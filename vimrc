@@ -96,6 +96,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'thaerkh/vim-indentguides'
 call plug#end()
 
 "set colorscheme :color
