@@ -93,7 +93,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'tomasiser/vim-code-dark'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'thaerkh/vim-indentguides'
@@ -101,31 +100,3 @@ call plug#end()
 
 "set colorscheme :color
 colorscheme codedark
-
-"CtrlP settings (file explorer)
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlP'
-let g:ctrlp_match_window='bottom,order:ttb'
-let g:ctrlp_switch_buffer=0
-let g:ctrlp_working_path_mode=0
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=40
-let g:ctrlp_root_markers=['.ctrlp']
-let g:ctrlp_by_filename=1
-let g:ctrlp_regexp=1
-let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s', 'find %s -type f']
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-"NERDTree
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-let g:NERDTreeDisableExactMatchHighlight = 1
-let g:NERDTreeDisablePatternMatchHighlight = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['html', 'json', 'markdown', 'md', 'python', 'js', 'jsx', 'css', 'py', 'scss', 'styl']
-let g:NERDTreeHighlightCursorline = 0
-autocmd BufEnter * silent! if bufname('%') !~# 'NERD_tree_' | cd %:p:h | NERDTreeCWD | wincmd p | endif
